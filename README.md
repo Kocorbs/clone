@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Intelligent Resource Allocation Recommender for Barangay Disaster Preparedness Activities
 
 **Academic Capstone Project — Bachelor of Science in Information Technology**  
@@ -109,3 +110,6 @@ Then open your web browser at:
   - **ISO 9126 Software Quality Model:** Functionality, Reliability, Usability, Efficiency, Maintainability, Portability.
 - **Statistical Treatment:** Automated computation of Weighted Mean ($\bar{x}$), Standard Deviation ($SD$), and Likert 5-point verbal interpretation (Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree).
 - **Sampling Framework:** Total Enumeration sampling targeting 100 respondents (1 BDRRM Head, 15 Barangay Officials, 20 Responders, 64 Residents).
+=======
+# thesis
+>>>>>>> 6ac7de45dacd4b78c61c3274b4f387ec57f1b500
