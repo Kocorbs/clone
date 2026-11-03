@@ -1,0 +1,2673 @@
+{
+    "algorithm": "RandomForestClassifier",
+    "n_estimators": 15,
+    "max_depth": 5,
+    "min_samples_split": 3,
+    "random_seed": 42,
+    "feature_importances": {
+        "disaster_type": 0.0407,
+        "severity_level": 0.9335,
+        "is_urgent": 0,
+        "purok_risk_level": 0,
+        "affected_households": 0.0258,
+        "affected_population": 0,
+        "totally_damaged_houses": 0,
+        "partially_damaged_houses": 0,
+        "vulnerable_members": 0,
+        "road_accessibility": 0
+    },
+    "trees": [
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "High",
+                "gain": 0.2988,
+                "samples": 112,
+                "gini": 0.7302,
+                "left": {
+                    "type": "split",
+                    "feature": "disaster_type",
+                    "is_numeric": false,
+                    "threshold": "Typhoon",
+                    "gain": 0.0058,
+                    "samples": 41,
+                    "gini": 0.0476,
+                    "left": {
+                        "type": "split",
+                        "feature": "affected_households",
+                        "is_numeric": true,
+                        "threshold": 52.5,
+                        "gain": 0.2449,
+                        "samples": 7,
+                        "gini": 0.2449,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "High",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 1,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 6,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 6,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 1,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 1
+                            },
+                            "gini": 0
+                        }
+                    },
+                    "right": {
+                        "type": "leaf",
+                        "predicted_class": "High",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 1,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 34,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 34,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "gini": 0
+                    }
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Medium",
+                    "gain": 0.3635,
+                    "samples": 71,
+                    "gini": 0.653,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Moderate",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 28,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0,
+                            "Moderate": 28
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Low",
+                        "gain": 0.4781,
+                        "samples": 43,
+                        "gini": 0.4781,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Low",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 1
+                            },
+                            "samples": 26,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 26
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 17,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 17
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0029,
+                "severity_level": 0.9761,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.021,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "affected_population",
+                "road_accessibility",
+                "vulnerable_members",
+                "purok_risk_level",
+                "affected_households",
+                "partially_damaged_houses",
+                "is_urgent",
+                "totally_damaged_houses"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2996,
+                "samples": 112,
+                "gini": 0.738,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 38,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 38
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3223,
+                    "samples": 74,
+                    "gini": 0.6636,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 23,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 23
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "High",
+                        "gain": 0.3579,
+                        "samples": 51,
+                        "gini": 0.4952,
+                        "left": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.0597,
+                            "samples": 32,
+                            "gini": 0.2188,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 52.5,
+                                "gain": 0.4628,
+                                "samples": 11,
+                                "gini": 0.4628,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 7,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 7,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 4,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 4
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 21,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 21,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 19,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 19
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0231,
+                "severity_level": 0.9153,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0616,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "is_urgent",
+                "affected_households",
+                "severity_level",
+                "affected_population",
+                "disaster_type",
+                "partially_damaged_houses",
+                "totally_damaged_houses",
+                "purok_risk_level"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2671,
+                "samples": 112,
+                "gini": 0.7486,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 31,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 31
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3273,
+                    "samples": 81,
+                    "gini": 0.6658,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 26,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 26
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Critical",
+                        "gain": 0.3707,
+                        "samples": 55,
+                        "gini": 0.4985,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 22,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 22
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.1646,
+                            "samples": 33,
+                            "gini": 0.213,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 48.5,
+                                "gain": 0.32,
+                                "samples": 5,
+                                "gini": 0.32,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 1,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 4,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 4
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 28,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 28,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0648,
+                "severity_level": 0.9161,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0191,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "partially_damaged_houses",
+                "totally_damaged_houses",
+                "is_urgent",
+                "purok_risk_level",
+                "affected_population",
+                "affected_households",
+                "vulnerable_members",
+                "severity_level"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2796,
+                "samples": 112,
+                "gini": 0.7414,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 33,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 33
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3658,
+                    "samples": 79,
+                    "gini": 0.6547,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 33,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 33
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "High",
+                        "gain": 0.3463,
+                        "samples": 46,
+                        "gini": 0.4962,
+                        "left": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.1826,
+                            "samples": 29,
+                            "gini": 0.2378,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 54.5,
+                                "gain": 0.32,
+                                "samples": 5,
+                                "gini": 0.32,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 1,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 4,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 4
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 24,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 24,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 17,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 17
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0638,
+                "severity_level": 0.9169,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0193,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "affected_households",
+                "is_urgent",
+                "purok_risk_level",
+                "vulnerable_members",
+                "disaster_type",
+                "severity_level",
+                "totally_damaged_houses",
+                "road_accessibility"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Low",
+                "gain": 0.303,
+                "samples": 112,
+                "gini": 0.7364,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Low",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 1
+                    },
+                    "samples": 39,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 39
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Medium",
+                    "gain": 0.3444,
+                    "samples": 73,
+                    "gini": 0.665,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Moderate",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 26,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0,
+                            "Moderate": 26
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "High",
+                        "gain": 0.3539,
+                        "samples": 47,
+                        "gini": 0.498,
+                        "left": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.1285,
+                            "samples": 26,
+                            "gini": 0.2604,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 52.5,
+                                "gain": 0.4898,
+                                "samples": 7,
+                                "gini": 0.4898,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 3,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 3,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 4,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 4
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 19,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 19,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 21,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 21
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0405,
+                "severity_level": 0.9179,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0416,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "severity_level",
+                "affected_population",
+                "road_accessibility",
+                "totally_damaged_houses",
+                "partially_damaged_houses",
+                "disaster_type",
+                "affected_households",
+                "vulnerable_members"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Low",
+                "gain": 0.2649,
+                "samples": 112,
+                "gini": 0.7403,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Low",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 1
+                    },
+                    "samples": 30,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 30
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Medium",
+                    "gain": 0.352,
+                    "samples": 82,
+                    "gini": 0.6493,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Moderate",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 29,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0,
+                            "Moderate": 29
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "High",
+                        "gain": 0.3249,
+                        "samples": 53,
+                        "gini": 0.46,
+                        "left": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.1463,
+                            "samples": 38,
+                            "gini": 0.1884,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 52.5,
+                                "gain": 0.32,
+                                "samples": 5,
+                                "gini": 0.32,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 1,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 4,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 4
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 33,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 33,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 15,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 15
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.067,
+                "severity_level": 0.9137,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0193,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "severity_level",
+                "affected_population",
+                "affected_households",
+                "vulnerable_members",
+                "totally_damaged_houses",
+                "is_urgent",
+                "road_accessibility",
+                "purok_risk_level"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2833,
+                "samples": 112,
+                "gini": 0.7428,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 34,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 34
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3298,
+                    "samples": 78,
+                    "gini": 0.6598,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 25,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 25
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "High",
+                        "gain": 0.3519,
+                        "samples": 53,
+                        "gini": 0.4856,
+                        "left": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.1567,
+                            "samples": 35,
+                            "gini": 0.2024,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 54.5,
+                                "gain": 0.32,
+                                "samples": 5,
+                                "gini": 0.32,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 1,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 4,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 4
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 30,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 30,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 18,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 18
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0659,
+                "severity_level": 0.9148,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0192,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "vulnerable_members",
+                "partially_damaged_houses",
+                "is_urgent",
+                "disaster_type",
+                "purok_risk_level",
+                "affected_households",
+                "road_accessibility",
+                "totally_damaged_houses"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2732,
+                "samples": 112,
+                "gini": 0.7326,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 31,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 31
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3618,
+                    "samples": 81,
+                    "gini": 0.6353,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 29,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 29
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "High",
+                        "gain": 0.3195,
+                        "samples": 52,
+                        "gini": 0.426,
+                        "left": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.0651,
+                            "samples": 39,
+                            "gini": 0.142,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 52.5,
+                                "gain": 0.5,
+                                "samples": 6,
+                                "gini": 0.5,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 3,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 3,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 3,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 3
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 33,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 33,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 13,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 13
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0309,
+                "severity_level": 0.9325,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0366,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "purok_risk_level",
+                "affected_households",
+                "affected_population",
+                "totally_damaged_houses",
+                "severity_level",
+                "is_urgent",
+                "road_accessibility",
+                "disaster_type"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2725,
+                "samples": 112,
+                "gini": 0.7345,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 31,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 31
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3538,
+                    "samples": 81,
+                    "gini": 0.6389,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 28,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 28
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Critical",
+                        "gain": 0.3312,
+                        "samples": 53,
+                        "gini": 0.4357,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 14,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 14
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.142,
+                            "samples": 39,
+                            "gini": 0.142,
+                            "left": {
+                                "type": "leaf",
+                                "predicted_class": "Critical",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 0,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 3,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 0,
+                                    "Medium": 0,
+                                    "Low": 0,
+                                    "Critical": 3
+                                },
+                                "gini": 0
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 36,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 36,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0673,
+                "severity_level": 0.9327,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "vulnerable_members",
+                "severity_level",
+                "is_urgent",
+                "road_accessibility",
+                "partially_damaged_houses",
+                "purok_risk_level",
+                "totally_damaged_houses",
+                "affected_households"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2879,
+                "samples": 112,
+                "gini": 0.7415,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 35,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 35
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3581,
+                    "samples": 77,
+                    "gini": 0.6598,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 30,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 30
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Critical",
+                        "gain": 0.4153,
+                        "samples": 47,
+                        "gini": 0.4943,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 19,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 19
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.0612,
+                            "samples": 28,
+                            "gini": 0.1327,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 60,
+                                "gain": 0.5,
+                                "samples": 4,
+                                "gini": 0.5,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 2,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 2,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 2,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 2
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 24,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 24,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0206,
+                "severity_level": 0.9553,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0241,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "purok_risk_level",
+                "disaster_type",
+                "is_urgent",
+                "partially_damaged_houses",
+                "totally_damaged_houses",
+                "affected_population",
+                "affected_households",
+                "vulnerable_members"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Low",
+                "gain": 0.2442,
+                "samples": 112,
+                "gini": 0.749,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Low",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 1
+                    },
+                    "samples": 27,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 27
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Medium",
+                    "gain": 0.3256,
+                    "samples": 85,
+                    "gini": 0.6652,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Moderate",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 27,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0,
+                            "Moderate": 27
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Critical",
+                        "gain": 0.4033,
+                        "samples": 58,
+                        "gini": 0.4976,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 24,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 24
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.0506,
+                            "samples": 34,
+                            "gini": 0.1609,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 52.5,
+                                "gain": 0.4688,
+                                "samples": 8,
+                                "gini": 0.4688,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 5,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 5,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 3,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 3
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 26,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 26,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0205,
+                "severity_level": 0.9348,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0447,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "totally_damaged_houses",
+                "vulnerable_members",
+                "partially_damaged_houses",
+                "severity_level",
+                "affected_population",
+                "disaster_type",
+                "road_accessibility",
+                "affected_households"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2692,
+                "samples": 112,
+                "gini": 0.7431,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 31,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 31
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3552,
+                    "samples": 81,
+                    "gini": 0.6554,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 30,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 30
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Critical",
+                        "gain": 0.4031,
+                        "samples": 51,
+                        "gini": 0.4767,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 18,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 18
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "split",
+                            "feature": "disaster_type",
+                            "is_numeric": false,
+                            "threshold": "Typhoon",
+                            "gain": 0.0411,
+                            "samples": 33,
+                            "gini": 0.1139,
+                            "left": {
+                                "type": "split",
+                                "feature": "affected_households",
+                                "is_numeric": true,
+                                "threshold": 54.5,
+                                "gain": 0.48,
+                                "samples": 5,
+                                "gini": 0.48,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 3,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 3,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 2,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 2
+                                    },
+                                    "gini": 0
+                                }
+                            },
+                            "right": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 28,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 28,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0163,
+                "severity_level": 0.9549,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0288,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "totally_damaged_houses",
+                "vulnerable_members",
+                "is_urgent",
+                "affected_households",
+                "purok_risk_level",
+                "severity_level",
+                "affected_population",
+                "road_accessibility"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "High",
+                "gain": 0.2779,
+                "samples": 112,
+                "gini": 0.7374,
+                "left": {
+                    "type": "split",
+                    "feature": "disaster_type",
+                    "is_numeric": false,
+                    "threshold": "Typhoon",
+                    "gain": 0.0973,
+                    "samples": 39,
+                    "gini": 0.0973,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Critical",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 2,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0,
+                            "Critical": 2
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "leaf",
+                        "predicted_class": "High",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 1,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 37,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 37,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "gini": 0
+                    }
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3663,
+                    "samples": 73,
+                    "gini": 0.653,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 30,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 30
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Medium",
+                        "gain": 0.4867,
+                        "samples": 43,
+                        "gini": 0.4867,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Moderate",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 25,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Moderate": 25
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 18,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 18
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0459,
+                "severity_level": 0.9541,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "totally_damaged_houses",
+                "purok_risk_level",
+                "vulnerable_members",
+                "severity_level",
+                "is_urgent",
+                "partially_damaged_houses",
+                "disaster_type",
+                "road_accessibility"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "Medium",
+                "gain": 0.2799,
+                "samples": 112,
+                "gini": 0.7408,
+                "left": {
+                    "type": "leaf",
+                    "predicted_class": "Moderate",
+                    "probabilities": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0
+                    },
+                    "samples": 33,
+                    "class_counts": {
+                        "Urgent": 0,
+                        "High": 0,
+                        "Medium": 0,
+                        "Low": 0,
+                        "Moderate": 33
+                    },
+                    "gini": 0
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Low",
+                    "gain": 0.3628,
+                    "samples": 79,
+                    "gini": 0.6534,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Low",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 1
+                        },
+                        "samples": 31,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 31
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "High",
+                        "gain": 0.4003,
+                        "samples": 48,
+                        "gini": 0.4783,
+                        "left": {
+                            "type": "split",
+                            "feature": "affected_households",
+                            "is_numeric": true,
+                            "threshold": 55,
+                            "gain": 0.0285,
+                            "samples": 31,
+                            "gini": 0.1207,
+                            "left": {
+                                "type": "leaf",
+                                "predicted_class": "High",
+                                "probabilities": {
+                                    "Urgent": 0,
+                                    "High": 1,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "samples": 24,
+                                "class_counts": {
+                                    "Urgent": 0,
+                                    "High": 24,
+                                    "Medium": 0,
+                                    "Low": 0
+                                },
+                                "gini": 0
+                            },
+                            "right": {
+                                "type": "split",
+                                "feature": "disaster_type",
+                                "is_numeric": false,
+                                "threshold": "Flood",
+                                "gain": 0.4082,
+                                "samples": 7,
+                                "gini": 0.4082,
+                                "left": {
+                                    "type": "leaf",
+                                    "predicted_class": "High",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 1,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 5,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 5,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "gini": 0
+                                },
+                                "right": {
+                                    "type": "leaf",
+                                    "predicted_class": "Critical",
+                                    "probabilities": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0
+                                    },
+                                    "samples": 2,
+                                    "class_counts": {
+                                        "Urgent": 0,
+                                        "High": 0,
+                                        "Medium": 0,
+                                        "Low": 0,
+                                        "Critical": 2
+                                    },
+                                    "gini": 0
+                                }
+                            }
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 17,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 17
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0344,
+                "severity_level": 0.9549,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0107,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "totally_damaged_houses",
+                "affected_households",
+                "road_accessibility",
+                "affected_population",
+                "vulnerable_members",
+                "severity_level",
+                "purok_risk_level",
+                "disaster_type"
+            ]
+        },
+        {
+            "tree_structure": {
+                "type": "split",
+                "feature": "severity_level",
+                "is_numeric": false,
+                "threshold": "High",
+                "gain": 0.2612,
+                "samples": 112,
+                "gini": 0.7357,
+                "left": {
+                    "type": "split",
+                    "feature": "disaster_type",
+                    "is_numeric": false,
+                    "threshold": "Typhoon",
+                    "gain": 0.089,
+                    "samples": 43,
+                    "gini": 0.1687,
+                    "left": {
+                        "type": "split",
+                        "feature": "affected_households",
+                        "is_numeric": true,
+                        "threshold": 52.5,
+                        "gain": 0.4898,
+                        "samples": 7,
+                        "gini": 0.4898,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "High",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 1,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 3,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 3,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 4,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 4
+                            },
+                            "gini": 0
+                        }
+                    },
+                    "right": {
+                        "type": "leaf",
+                        "predicted_class": "High",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 1,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 36,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 36,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "gini": 0
+                    }
+                },
+                "right": {
+                    "type": "split",
+                    "feature": "severity_level",
+                    "is_numeric": false,
+                    "threshold": "Medium",
+                    "gain": 0.3468,
+                    "samples": 69,
+                    "gini": 0.665,
+                    "left": {
+                        "type": "leaf",
+                        "predicted_class": "Moderate",
+                        "probabilities": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0
+                        },
+                        "samples": 25,
+                        "class_counts": {
+                            "Urgent": 0,
+                            "High": 0,
+                            "Medium": 0,
+                            "Low": 0,
+                            "Moderate": 25
+                        },
+                        "gini": 0
+                    },
+                    "right": {
+                        "type": "split",
+                        "feature": "severity_level",
+                        "is_numeric": false,
+                        "threshold": "Low",
+                        "gain": 0.499,
+                        "samples": 44,
+                        "gini": 0.499,
+                        "left": {
+                            "type": "leaf",
+                            "predicted_class": "Low",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 1
+                            },
+                            "samples": 21,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 21
+                            },
+                            "gini": 0
+                        },
+                        "right": {
+                            "type": "leaf",
+                            "predicted_class": "Critical",
+                            "probabilities": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0
+                            },
+                            "samples": 23,
+                            "class_counts": {
+                                "Urgent": 0,
+                                "High": 0,
+                                "Medium": 0,
+                                "Low": 0,
+                                "Critical": 23
+                            },
+                            "gini": 0
+                        }
+                    }
+                }
+            },
+            "feature_importances": {
+                "disaster_type": 0.0465,
+                "severity_level": 0.9119,
+                "is_urgent": 0,
+                "purok_risk_level": 0,
+                "affected_households": 0.0416,
+                "affected_population": 0,
+                "totally_damaged_houses": 0,
+                "partially_damaged_houses": 0,
+                "vulnerable_members": 0,
+                "road_accessibility": 0
+            },
+            "features": [
+                "disaster_type",
+                "affected_households",
+                "vulnerable_members",
+                "totally_damaged_houses",
+                "partially_damaged_houses",
+                "severity_level",
+                "is_urgent",
+                "purok_risk_level"
+            ]
+        }
+    ],
+    "classes": [
+        "Critical",
+        "High",
+        "Moderate",
+        "Low"
+    ]
+}

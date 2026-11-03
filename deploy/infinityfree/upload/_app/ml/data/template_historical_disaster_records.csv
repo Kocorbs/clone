@@ -1,0 +1,2 @@
+disaster_date,disaster_type,weather_condition,affected_barangay,affected_purok,purok_risk_level,severity_level,is_urgent,affected_households,affected_population,requested_supply_type,requested_quantity,allocated_quantity,priority_label,data_source
+2026-02-15,Flood,"Heavy Rain",Hinaplanon,"Purok 1",High,Critical,1,45,180,"Relief Goods",50,50,Urgent,"BDRRMC Historical Incident Log"
