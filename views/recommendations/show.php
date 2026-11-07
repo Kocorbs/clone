@@ -97,14 +97,14 @@
             </div>
 
             <!-- Question 5: What action should the official take? -->
-            <div style="padding: 16px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); grid-column: 1 / -1;">
+            <div style="padding: 16px; background: #f0f8f7; border: 1px solid #b6e1db; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); grid-column: 1 / -1;">
                 <div style="font-size: 0.75rem; font-weight: 800; color: #1d4ed8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">
                     5. What Action Should the Official Take?
                 </div>
-                <div style="font-size: 0.95rem; font-weight: 600; color: #1e3a8a; line-height: 1.45;">
+                <div style="font-size: 0.95rem; font-weight: 600; color: #00665B; line-height: 1.45;">
                     <?= htmlspecialchars($rec['recommendation_reason']) ?>
                 </div>
-                <div style="margin-top: 8px; font-size: 0.82rem; color: #2563eb;">
+                <div style="margin-top: 8px; font-size: 0.82rem; color: #1B7E74;">
                     Assigned Priority: <strong><?= View::priorityBadge($rec['predicted_priority']) ?></strong> — Review and authorize allocation in the Action Panel below.
                 </div>
             </div>

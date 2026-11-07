@@ -11,6 +11,11 @@ use App\Models\Purok;
 use App\Models\AuditLog;
 
 class AuthController {
+        public function showLanding(): void {
+        $puroks = Purok::all();
+        View::render('portal.landing', ['title' => 'Padayon Hinaplanon — DRRM Portal', 'puroks' => $puroks], 'auth');
+    }
+
     public function showLogin(): void {
         if (Auth::check()) {
             header("Location: index.php?route=dashboard");

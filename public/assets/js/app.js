@@ -2,6 +2,82 @@
 // Barangay Hinaplanon Disaster Management & Leaflet.js Hazard Map Controller
 
 document.addEventListener('DOMContentLoaded', function () {
+    // 0. Sticky Portal Header Shrink on Scroll & Wheel
+    const stickyHeader = document.getElementById('portalStickyHeader');
+    if (stickyHeader) {
+        let isShrunk = false;
+
+        const setHeaderShrunk = (shrunk) => {
+            if (shrunk !== isShrunk) {
+                isShrunk = shrunk;
+                if (isShrunk) {
+                    stickyHeader.classList.add('scrolled');
+                } else {
+                    stickyHeader.classList.remove('scrolled');
+                }
+            }
+        };
+
+        const handleScroll = () => {
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
+            if (scrollY > 15) {
+                setHeaderShrunk(true);
+            } else if (scrollY <= 5) {
+                setHeaderShrunk(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        document.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Wheel listener for instant shrinking upon rolling the mouse wheel down
+        window.addEventListener('wheel', (e) => {
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
+            if (e.deltaY > 15) {
+                setHeaderShrunk(true);
+            } else if (e.deltaY < -15 && scrollY <= 25) {
+                setHeaderShrunk(false);
+            }
+        }, { passive: true });
+
+        // Touch gestures for mobile screens
+        let touchStartY = 0;
+        window.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches[0]) touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches && e.touches[0]) {
+                const diff = touchStartY - e.touches[0].clientY;
+                const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
+                if (diff > 20) {
+                    setHeaderShrunk(true);
+                } else if (diff < -20 && scrollY <= 25) {
+                    setHeaderShrunk(false);
+                }
+            }
+        }, { passive: true });
+
+        handleScroll();
+    }
+
+    // 0. Mobile Sidebar Toggle & Overlay
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('appSidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('open');
+            if (sidebarOverlay) sidebarOverlay.classList.toggle('active');
+        });
+    }
+    if (sidebarOverlay && sidebar) {
+        sidebarOverlay.addEventListener('click', function () {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+        });
+    }
+
     // 1. Password Visibility Toggle
     const togglePassBtn = document.getElementById('togglePassword');
     const passInput = document.getElementById('password');
@@ -27,6 +103,46 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    
+    // 2.5 Login Split Door Animation on Form Submission
+    const loginForm = document.getElementById('portalLoginForm');
+    const splitModal = document.querySelector('.auth-split-modal');
+    if (loginForm && splitModal) {
+        let isSplitting = false;
+        loginForm.addEventListener('submit', function (e) {
+            if (isSplitting) return; // Allow natural submission on second trigger
+
+            const idInput = document.getElementById('identifier');
+            const passInput = document.getElementById('password');
+            const idVal = (idInput ? idInput.value : '').trim();
+            const passVal = (passInput ? passInput.value : '').trim();
+
+            if (!idVal || !passVal) {
+                // If fields are empty, let HTML5 validation handle it without splitting
+                return;
+            }
+
+            e.preventDefault();
+            isSplitting = true;
+
+            // Trigger visual split animation
+            splitModal.classList.add('splitting');
+
+            // Provide visual feedback on button
+            const submitBtn = loginForm.querySelector('.auth-pill-submit-btn');
+            if (submitBtn) {
+                submitBtn.innerHTML = '<span>Entering Portal...</span> <i class="fa fa-spinner fa-spin"></i>';
+                submitBtn.style.opacity = '0.9';
+                submitBtn.disabled = true;
+            }
+
+            // Submit after split doors open
+            setTimeout(function () {
+                HTMLFormElement.prototype.submit.call(loginForm);
+            }, 680);
+        });
+    }
 
     // 3. Auto-Calculate Affected Population from Households (1 HH ~ 4-5 persons)
     const hhInput = document.getElementById('affected_households');

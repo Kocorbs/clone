@@ -131,11 +131,11 @@
             </div>
 
             <!-- Question 5: What action should the official take? -->
-            <div style="padding: 16px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); grid-column: 1 / -1;">
+            <div style="padding: 16px; background: #f0f8f7; border: 1px solid #b6e1db; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); grid-column: 1 / -1;">
                 <div style="font-size: 0.75rem; font-weight: 800; color: #1e40af; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">
                     5. What Action Should the Official Take?
                 </div>
-                <div style="font-size: 0.9rem; color: #1e3a8a; line-height: 1.4;">
+                <div style="font-size: 0.9rem; color: #00665B; line-height: 1.4;">
                     Official status is currently <strong><?= htmlspecialchars($assessment['allocation_status'] ?? 'Recommended') ?></strong>.
                     <?php if (in_array($currentRole, ['Barangay Head', 'ICDRRMO'])): ?>
                         Authorized officials may <strong>Approve</strong> the allocation as recommended, <strong>Modify</strong> specific supply quantities based on ground realities, or <strong>Reject / Return</strong> with written justification.
@@ -190,7 +190,7 @@
                                 <span style="font-weight: 700; color: #0f172a;"><?= number_format((float)$factor['contribution_pct'], 1) ?>%</span>
                             </div>
                             <div style="background: #e2e8f0; border-radius: 4px; height: 8px; overflow: hidden; margin-bottom: 3px;">
-                                <div style="background: <?= (float)$factor['contribution_pct'] >= 25 ? '#dc2626' : ((float)$factor['contribution_pct'] >= 18 ? '#ea580c' : '#2563eb') ?>; width: <?= min(100, (float)$factor['contribution_pct'] * 3.5) ?>%; height: 100%;"></div>
+                                <div style="background: <?= (float)$factor['contribution_pct'] >= 25 ? '#dc2626' : ((float)$factor['contribution_pct'] >= 18 ? '#ea580c' : '#1B7E74') ?>; width: <?= min(100, (float)$factor['contribution_pct'] * 3.5) ?>%; height: 100%;"></div>
                             </div>
                             <div style="font-size: 0.75rem; color: #64748b;"><?= htmlspecialchars($factor['description']) ?></div>
                         </div>

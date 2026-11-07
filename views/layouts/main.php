@@ -15,14 +15,18 @@
 <body>
 <div class="app-wrapper">
     <!-- Modern Emergency Management Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="appSidebar">
         <div class="sidebar-brand">
-            <div class="sidebar-brand-icon">
-                <i class="fa fa-shield-halved"></i>
+            <div class="sidebar-brand-logo">
+                <img src="assets/images/hinaplanon_seal.png" alt="Barangay Hinaplanon Official Seal" class="brand-logo-img">
             </div>
-            <div>
-                <div class="brand-title">Hinaplanon DRRM</div>
-                <div class="brand-subtitle">Intelligent Resource Recommender</div>
+            <div class="brand-title-wrap">
+                <div class="brand-title-main">
+                    <div class="brand-line"><span class="brand-initial">H</span>INAPLANON</div>
+                    <div class="brand-line"><span class="brand-initial">D</span>RRM</div>
+                    <div class="brand-line"><span class="brand-initial">S</span>YSTEM</div>
+                </div>
+                <div class="brand-subtitle">Resource Allocation Recommender</div>
             </div>
         </div>
 
@@ -32,7 +36,7 @@
                 <!-- 1. RESIDENT NAVIGATION                                   -->
                 <!-- ======================================================== -->
                 <li class="<?= ($_GET['route'] ?? 'dashboard') === 'dashboard' ? 'active' : '' ?>">
-                    <a href="index.php?route=dashboard"><i class="fa fa-gauge-high"></i> Dashboard Overview</a>
+                    <a href="index.php?route=dashboard"><i class="fa-solid fa-house"></i> Dashboard Overview</a>
                 </li>
 
                 <div class="nav-section-title"><i class="fa fa-clock-rotate-left"></i> Community Preparedness</div>
@@ -61,7 +65,7 @@
                 <!-- 2. RESPONDER NAVIGATION                                  -->
                 <!-- ======================================================== -->
                 <li class="<?= ($_GET['route'] ?? 'dashboard') === 'dashboard' ? 'active' : '' ?>">
-                    <a href="index.php?route=dashboard"><i class="fa fa-gauge-high"></i> Dashboard Overview</a>
+                    <a href="index.php?route=dashboard"><i class="fa-solid fa-house"></i> Dashboard Overview</a>
                 </li>
 
                 <div class="nav-section-title"><i class="fa fa-clock-rotate-left"></i> Field Records</div>
@@ -95,7 +99,7 @@
                 <!-- 3. BARANGAY HEAD (ADMIN) NAVIGATION                      -->
                 <!-- ======================================================== -->
                 <li class="<?= ($_GET['route'] ?? 'dashboard') === 'dashboard' ? 'active' : '' ?>">
-                    <a href="index.php?route=dashboard"><i class="fa fa-gauge-high"></i> Dashboard Overview</a>
+                    <a href="index.php?route=dashboard"><i class="fa-solid fa-house"></i> Dashboard Overview</a>
                 </li>
 
                 <div class="nav-section-title"><i class="fa fa-shield-halved"></i> Disaster Preparedness</div>
@@ -141,7 +145,7 @@
                 <!-- 4. ICDRRMO (SUPER ADMIN) NAVIGATION                      -->
                 <!-- ======================================================== -->
                 <li class="<?= ($_GET['route'] ?? 'dashboard') === 'dashboard' ? 'active' : '' ?>">
-                    <a href="index.php?route=dashboard"><i class="fa fa-gauge-high"></i> Dashboard Overview</a>
+                    <a href="index.php?route=dashboard"><i class="fa-solid fa-house"></i> Dashboard Overview</a>
                 </li>
 
                 <div class="nav-section-title"><i class="fa fa-shield-halved"></i> Disaster Preparedness</div>
@@ -189,13 +193,29 @@
                 </li>
             <?php endif; ?>
         </ul>
+
+        <!-- Pinned Sidebar Bottom / Logout (Document Tracking System style) -->
+        <div class="sidebar-footer">
+            <a href="index.php?route=logout" class="sidebar-logout-link" title="Sign Out">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
     </aside>
+
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <!-- Main Content Area -->
     <div class="main-content-wrapper">
         <header class="topbar">
-            <div class="page-title-header">
-                <?= htmlspecialchars($title ?? 'Barangay Hinaplanon DRRM') ?>
+            <div class="topbar-left">
+                <button type="button" class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle Navigation Sidebar">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="page-title-header">
+                    <?= htmlspecialchars($title ?? 'Barangay Hinaplanon DRRM') ?>
+                </div>
             </div>
 
             <div class="topbar-actions">

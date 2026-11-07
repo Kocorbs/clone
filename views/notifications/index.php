@@ -160,7 +160,7 @@ if (!function_exists('getPriorityBadge')) {
 <!-- ============================================== -->
 <!-- 1. WELCOME BANNER (Personalized & Responsive)  -->
 <!-- ============================================== -->
-<div style="background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #eff6ff 100%); border: 1px solid #bbf7d0; border-radius: 14px; padding: 20px 24px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);">
+<div style="background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #f0f8f7 100%); border: 1px solid #bbf7d0; border-radius: 14px; padding: 20px 24px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
         <div style="flex: 1; min-width: 280px;">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
@@ -436,13 +436,13 @@ if (!function_exists('getPriorityBadge')) {
                 </div>
 
                 <!-- Claiming Schedule & Location Box -->
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px;">
+                <div style="background: #f0f8f7; border: 1px solid #b6e1db; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px;">
                     <div style="font-size: 0.78rem; font-weight: 700; color: #1e40af; text-transform: uppercase; margin-bottom: 6px;">
                         <i class="fa fa-calendar-day"></i> Official Claiming Schedule & Pickup Station
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <div>
-                            <div style="font-size: 1rem; font-weight: 800; color: #1e3a8a;">
+                            <div style="font-size: 1rem; font-weight: 800; color: #00665B;">
                                 <?= !empty($myBeneficiary['claiming_date']) ? date('l, F d, Y', strtotime($myBeneficiary['claiming_date'])) : 'Schedule Announcement Pending' ?>
                             </div>
                             <div style="font-size: 0.85rem; color: #1d4ed8; margin-top: 2px;">
@@ -711,9 +711,9 @@ if (!function_exists('getPriorityBadge')) {
                                 $isCritical = in_array(strtolower($n['priority'] ?? ''), ['urgent', 'critical']);
                                 $isWarning = in_array(strtolower($n['priority'] ?? ''), ['high', 'warning']);
                                 
-                                $badgeColor = '#eff6ff';
+                                $badgeColor = '#f0f8f7';
                                 $badgeText = '#1d4ed8';
-                                $badgeBorder = '#bfdbfe';
+                                $badgeBorder = '#b6e1db';
                                 $badgeLabel = 'INFO';
                                 $iconColor = '#3b82f6';
                                 
@@ -786,7 +786,7 @@ if (!function_exists('getPriorityBadge')) {
             <div class="hub-card-body" style="padding: 16px;">
                 <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem; color: #334155;">
                     <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #eff6ff; color: #2563eb; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">1</span>
+                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #f0f8f7; color: #1B7E74; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">1</span>
                         <div>
                             <strong style="color: #0f172a;">Valid Identification Requirement:</strong>
                             Present at least one (1) valid government photo ID, Barangay ID, or Barangay Certificate of Residency at the intake triage desk.
@@ -794,7 +794,7 @@ if (!function_exists('getPriorityBadge')) {
                     </div>
 
                     <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #eff6ff; color: #2563eb; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">2</span>
+                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #f0f8f7; color: #1B7E74; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">2</span>
                         <div>
                             <strong style="color: #0f172a;">Authorized Representative (Proxy) Policy:</strong>
                             If the registered household head is unable to claim in person due to medical or elderly reasons, an immediate family member may claim with a signed Authorization Letter and valid IDs of both.
@@ -802,7 +802,7 @@ if (!function_exists('getPriorityBadge')) {
                     </div>
 
                     <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #eff6ff; color: #2563eb; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">3</span>
+                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #f0f8f7; color: #1B7E74; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">3</span>
                         <div>
                             <strong style="color: #0f172a;">Strict Schedule Adherence:</strong>
                             Please arrive strictly within your assigned Purok batch schedule to ensure smooth crowd control and avoid delays at Station B.
@@ -810,7 +810,7 @@ if (!function_exists('getPriorityBadge')) {
                     </div>
 
                     <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #eff6ff; color: #2563eb; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">4</span>
+                        <span style="display: flex; width: 22px; height: 22px; border-radius: 50%; background: #f0f8f7; color: #1B7E74; font-weight: 700; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.78rem;">4</span>
                         <div>
                             <strong style="color: #0f172a;">Verification Stub / QR Code:</strong>
                             Keep your confirmation SMS, QR stub, or issued Barangay Claim Stub handy for immediate barcode scanning at the dispensing station.
@@ -918,14 +918,14 @@ if (!function_exists('getPriorityBadge')) {
             </div>
 
             <!-- Pickup Schedule & Station Details -->
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px; margin-bottom: 16px; font-size: 0.85rem;">
+            <div style="background: #f0f8f7; border: 1px solid #b6e1db; border-radius: 10px; padding: 14px; margin-bottom: 16px; font-size: 0.85rem;">
                 <div style="color: #1e40af; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; margin-bottom: 6px;">
                     <i class="fa fa-calendar-check"></i> Pickup Schedule & Station
                 </div>
-                <div style="color: #1e3a8a; font-weight: 700; font-size: 0.95rem;">
+                <div style="color: #00665B; font-weight: 700; font-size: 0.95rem;">
                     <?= !empty($myBeneficiary['claiming_date']) ? date('l, F d, Y', strtotime($myBeneficiary['claiming_date'])) : 'Official Date Announced Soon' ?>
                 </div>
-                <div style="color: #2563eb; font-size: 0.82rem; margin-top: 2px;">
+                <div style="color: #1B7E74; font-size: 0.82rem; margin-top: 2px;">
                     Time Window: <strong><?= htmlspecialchars($myBeneficiary['claiming_time'] ?? '08:00 AM - 12:00 PM') ?></strong>
                 </div>
                 <div style="color: #1e40af; font-size: 0.82rem; margin-top: 2px;">

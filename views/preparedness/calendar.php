@@ -85,15 +85,15 @@ foreach ($activities as $act) {
     z-index: 2;
 }
 .cal-day-cell.is-today {
-    background: #eff6ff !important;
-    border: 2px solid #2563eb !important;
+    background: #f0f8f7 !important;
+    border: 2px solid #1B7E74 !important;
 }
 .cal-day-cell.has-events {
     background: #fdfdf9;
     border-color: #f59e0b;
 }
 .cal-day-cell.cal-day-active {
-    outline: 3px solid #2563eb !important;
+    outline: 3px solid #1B7E74 !important;
     outline-offset: -1px;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25) !important;
     z-index: 3;
@@ -269,7 +269,7 @@ foreach ($activities as $act) {
                 <span style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; display: inline-block;"></span> Completed
             </span>
             <span style="display: inline-flex; align-items: center; gap: 5px;">
-                <span style="width: 10px; height: 10px; border-radius: 50%; background: #2563eb; display: inline-block; border: 2px solid #93c5fd;"></span> Today
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: #1B7E74; display: inline-block; border: 2px solid #a3e2db;"></span> Today
             </span>
         </div>
     </div>
@@ -307,7 +307,7 @@ foreach ($activities as $act) {
                         </span>
                         <div>
                             <?php if ($isToday): ?>
-                                <span style="background: #2563eb; color: #fff; font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 700;">TODAY</span>
+                                <span style="background: #1B7E74; color: #fff; font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 700;">TODAY</span>
                             <?php endif; ?>
                             <?php if ($eventsCount > 0): ?>
                                 <span class="badge badge-info" style="font-size: 9px; padding: 1px 4px; border-radius: 3px;">
@@ -380,7 +380,7 @@ foreach ($activities as $act) {
     <?php foreach ($activities as $act): ?>
         <?php 
             $isPast = ($act['status'] === 'Completed' || strtotime($act['schedule_date']) < time());
-            $borderColor = $isPast ? '#10b981' : '#2563eb';
+            $borderColor = $isPast ? '#10b981' : '#1B7E74';
             $filterCategory = $isPast ? 'past' : 'upcoming';
         ?>
         <div class="card event-activity-card" 
@@ -617,7 +617,7 @@ foreach ($activities as $act) {
 
             let html = '';
             dayEvents.forEach(act => {
-                const borderLeftColor = act.is_past ? '#10b981' : '#2563eb';
+                const borderLeftColor = act.is_past ? '#10b981' : '#1B7E74';
                 const statusBadge = act.is_past 
                     ? `<span class="badge badge-success"><i class="fa fa-check"></i> Past / Completed</span>` 
                     : `<span class="badge badge-warning"><i class="fa fa-clock"></i> Upcoming Drill</span>`;
@@ -773,7 +773,7 @@ foreach ($activities as $act) {
 
             let emptyHtml = `
                 <div style="text-align: center; padding: 36px 16px;">
-                    <div style="width: 64px; height: 64px; border-radius: 50%; background: #eff6ff; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+                    <div style="width: 64px; height: 64px; border-radius: 50%; background: #f0f8f7; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px;">
                         <i class="fa fa-calendar-day" style="font-size: 1.8rem; color: #3b82f6;"></i>
                     </div>
                     <h4 style="margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 800; color: var(--primary-dark);">

@@ -337,7 +337,7 @@
         <!-- Modal Body -->
         <div style="padding: 20px 24px; overflow-y: auto;">
             <!-- Natural Language Rationale Box -->
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; border-radius: 6px; padding: 14px 16px; margin-bottom: 20px;">
+            <div style="background: #f0f8f7; border: 1px solid #b6e1db; border-left: 4px solid #3b82f6; border-radius: 6px; padding: 14px 16px; margin-bottom: 20px;">
                 <div style="font-weight: 800; font-size: 0.82rem; color: #1e40af; text-transform: uppercase; margin-bottom: 4px;">
                     <i class="fa fa-comment-dots"></i> Explainable AI Narrative
                 </div>
@@ -432,7 +432,7 @@
                         <span style="font-weight: 700; color: #0f172a;">${f.contribution_pct}% contribution</span>
                     </div>
                     <div style="background: #e2e8f0; border-radius: 4px; height: 7px; overflow: hidden; margin-bottom: 3px;">
-                        <div style="background: ${f.contribution_pct >= 25 ? '#dc2626' : (f.contribution_pct >= 18 ? '#ea580c' : '#2563eb')}; width: ${Math.min(100, f.contribution_pct * 3.5)}%; height: 100%;"></div>
+                        <div style="background: ${f.contribution_pct >= 25 ? '#dc2626' : (f.contribution_pct >= 18 ? '#ea580c' : '#1B7E74')}; width: ${Math.min(100, f.contribution_pct * 3.5)}%; height: 100%;"></div>
                     </div>
                     <div style="font-size: 0.72rem; color: #64748b;">${f.description}</div>
                 `;

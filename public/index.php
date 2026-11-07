@@ -48,7 +48,8 @@ Auth::startSession();
 
 $router = new Router();
 
-// Authentication Routes
+// Landing Page & Authentication Routes
+$router->get('landing', [AuthController::class, 'showLanding']);
 $router->get('login', [AuthController::class, 'showLogin']);
 $router->post('login', [AuthController::class, 'login']);
 $router->get('logout', [AuthController::class, 'logout']);

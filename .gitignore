@@ -1,0 +1,10 @@
+# Sessions & caches
+database/sessions/*
+!database/sessions/.gitkeep
+
+# Temporary scratch scripts
+scratch/
+
+# IDE files
+.idea/
+.vscode/

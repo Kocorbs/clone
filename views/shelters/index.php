@@ -18,7 +18,7 @@
     <div class="stat-card">
         <div class="stat-header">
             <div class="stat-label">Total Shelters</div>
-            <div class="stat-icon" style="background:#eff6ff; color:#2563eb;"><i class="fa fa-building-shield"></i></div>
+            <div class="stat-icon" style="background:#f0f8f7; color:#1B7E74;"><i class="fa fa-building-shield"></i></div>
         </div>
         <div class="stat-value"><?= (int)$summary['total_shelters'] ?></div>
         <div class="stat-sub">Official designated evacuation centers</div>

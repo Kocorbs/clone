@@ -16,7 +16,8 @@ class Router {
 
     public function dispatch(): void {
         $method = Request::method();
-        $route = Request::get('route', 'dashboard');
+        $defaultRoute = Auth::check() ? 'dashboard' : 'landing';
+        $route = Request::get('route', $defaultRoute);
 
         // Check if route exists for current method
         if (isset($this->routes[$method][$route])) {

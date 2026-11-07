@@ -106,7 +106,7 @@ if (!function_exists('getOversightStatusBadge')) {
 <!-- ============================================== -->
 <div class="oversight-card" style="border-left: 4px solid #3b82f6; margin-bottom: 20px;">
     <div style="padding: 12px 18px; background: #f8fafc; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
-        <div style="font-size: 0.88rem; font-weight: 700; color: #1e3a8a; display: flex; align-items: center; gap: 8px;">
+        <div style="font-size: 0.88rem; font-weight: 700; color: #00665B; display: flex; align-items: center; gap: 8px;">
             <i class="fa fa-bell text-primary"></i> Real-Time Relief Claims Activity Log
         </div>
         <span class="badge" style="background: #e0f2fe; color: #0369a1; font-size: 0.72rem;">
@@ -128,7 +128,7 @@ if (!function_exists('getOversightStatusBadge')) {
                         $bgStyle = '#fffbeb';
                     } elseif (strpos($rn['notification_type'], 'approved') !== false) {
                         $iconClass = 'fa-circle-check text-primary';
-                        $bgStyle = '#eff6ff';
+                        $bgStyle = '#f0f8f7';
                     } elseif (strpos($rn['notification_type'], 'rejected') !== false) {
                         $iconClass = 'fa-circle-xmark text-danger';
                         $bgStyle = '#fef2f2';
@@ -337,7 +337,7 @@ if (!function_exists('getOversightStatusBadge')) {
                                 <div style="font-weight: 700; color: #1e40af; font-size: 0.82rem;">
                                     <i class="fa fa-calendar-day"></i> <?= !empty($b['claiming_date']) ? date('M d, Y', strtotime($b['claiming_date'])) : 'Pending' ?>
                                 </div>
-                                <div style="font-size: 0.75rem; color: #1e3a8a;">
+                                <div style="font-size: 0.75rem; color: #00665B;">
                                     Window: <?= htmlspecialchars($b['claiming_time'] ?? '08:00 AM - 12:00 PM') ?>
                                 </div>
                                 <small style="color: #64748b; display: block;">
@@ -463,7 +463,7 @@ if (!function_exists('getOversightStatusBadge')) {
 <div id="oversightInterventionModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15,23,42,0.65); z-index: 9999; justify-content: center; align-items: center; padding: 16px;">
     <div style="background: #ffffff; border-radius: 14px; max-width: 540px; width: 100%; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.25); overflow: hidden; animation: fadeInModal 0.2s ease-out;">
         <!-- Header -->
-        <div style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); padding: 16px 20px; color: #ffffff; display: flex; justify-content: space-between; align-items: center;">
+        <div style="background: linear-gradient(135deg, #00665B 0%, #1e40af 100%); padding: 16px 20px; color: #ffffff; display: flex; justify-content: space-between; align-items: center;">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <i class="fa fa-shield-halved" style="font-size: 1.25rem;"></i>
                 <div>
@@ -564,7 +564,7 @@ if (!function_exists('getOversightStatusBadge')) {
             <!-- Timeline Steps -->
             <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.84rem;">
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
-                    <div style="width: 28px; height: 28px; border-radius: 50%; background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <div style="width: 28px; height: 28px; border-radius: 50%; background: #f0f8f7; color: #1B7E74; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fa fa-brain"></i>
                     </div>
                     <div>
