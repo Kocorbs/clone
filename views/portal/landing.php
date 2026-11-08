@@ -1,5 +1,11 @@
 <!-- views/portal/landing.php — Public DRRM Landing Page -->
-<div class="portal-page">
+<div class="portal-page portal-landing-page">
+    <!-- Barangay Hall Building Photo Background with Dark Vignette Overlay -->
+    <div class="portal-bg-hall-backdrop" aria-hidden="true">
+        <img src="assets/images/hinaplanon_hall.jpg" alt="Barangay Hinaplanon Barangay Hall" class="portal-hall-bg-img">
+        <div class="portal-hall-vignette"></div>
+    </div>
+
     <!-- Sticky Collapsible Portal Header -->
     <div class="portal-sticky-header" id="portalStickyHeader">
         <!-- 1. Top Emergency / Monitoring Alert Ticker Bar (Right-to-Left Live Crawl) -->
@@ -72,8 +78,8 @@
             </div>
         </div>
 
-        <!-- 2. Primary Navigation Header -->
-        <header class="portal-header">
+        <!-- 2. Primary Navigation Header (Seamless Transparent, No Container Box) -->
+        <header class="portal-header portal-header-transparent">
             <a href="index.php?route=landing" class="portal-brand">
                 <img src="assets/images/hinaplanon_seal.png" alt="Barangay Hinaplanon Official Seal" class="portal-seal-img">
                 <div class="portal-brand-text">
@@ -83,7 +89,7 @@
             </a>
 
             <div class="portal-header-actions">
-                <a href="index.php?route=login" class="portal-header-login-link" style="background: rgba(255,255,255,0.15); border-radius: 6px; padding: 7px 16px;">
+                <a href="index.php?route=login" class="portal-header-login-link" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); border-radius: 9999px; padding: 6px 18px;">
                     <i class="fa fa-right-to-bracket"></i> Log In
                 </a>
                 <button type="button" class="portal-emergency-pill" onclick="openPortalModal('modalEmergency', event)">
@@ -97,12 +103,6 @@
 
     <!-- 4. Hero Section — Public Landing Showcase (No Login Form) -->
     <main class="portal-hero-container" id="home">
-        <!-- Official Barangay Seal Background Watermark with Dark Vignette Overlay -->
-        <div class="portal-bg-seal-watermark" aria-hidden="true">
-            <img src="assets/images/hinaplanon_seal.png" alt="Barangay Hinaplanon Official Seal" class="portal-watermark-seal">
-            <div class="portal-seal-vignette"></div>
-        </div>
-
         <div class="portal-hero-grid">
             <div class="portal-hero-showcase">
                 <!-- Clean, Authoritative Headline -->
