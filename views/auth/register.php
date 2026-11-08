@@ -2,19 +2,73 @@
 <div class="portal-page">
     <!-- Sticky Collapsible Portal Header -->
     <div class="portal-sticky-header" id="portalStickyHeader">
-    <!-- 1. Top Emergency / Monitoring Alert Ticker Bar -->
-    <div class="portal-alert-bar">
-        <div class="portal-alert-item alert-primary-item">
-            <i class="fa fa-triangle-exclamation" style="color: #facc15;"></i>
-            <span><strong style="color: #fef08a;">ALERT:</strong> Mandulog River monitoring active &bull; Check your Purok risk level</span>
-        </div>
-        <div class="portal-alert-item alert-secondary-item">
-            <i class="fa fa-phone" style="color: #facc15;"></i>
-            <span>CDRRMO Emergency Hotline: <strong>911</strong></span>
-        </div>
-        <div class="portal-alert-item alert-tertiary-item">
-            <i class="fa fa-cloud-bolt" style="color: #facc15;"></i>
-            <span>PAGASA Update: <strong>Normal / Alert Level 0</strong> &bull; Hinaplanon DRRM</span>
+    <!-- 1. Top Emergency / Monitoring Alert Ticker Bar (Right-to-Left Live Crawl) -->
+    <div class="portal-alert-bar" role="region" aria-label="Emergency Alerts Ticker" title="Emergency Advisory Ticker — Hover to pause">
+        <div class="portal-ticker-track">
+            <div class="portal-ticker-content">
+                <div class="portal-alert-item alert-primary-item">
+                    <i class="fa fa-triangle-exclamation" style="color: #facc15;"></i>
+                    <span><strong style="color: #fef08a;">ALERT:</strong> Mandulog River monitoring active &bull; Check your Purok risk level</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-secondary-item">
+                    <i class="fa fa-phone" style="color: #facc15;"></i>
+                    <span>CDRRMO Emergency Hotline: <strong>911</strong></span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-tertiary-item">
+                    <i class="fa fa-cloud-bolt" style="color: #facc15;"></i>
+                    <span>PAGASA Update: <strong>Normal / Alert Level 0</strong> &bull; Hinaplanon DRRM</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-primary-item">
+                    <i class="fa fa-triangle-exclamation" style="color: #facc15;"></i>
+                    <span><strong style="color: #fef08a;">ALERT:</strong> Mandulog River monitoring active &bull; Check your Purok risk level</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-secondary-item">
+                    <i class="fa fa-phone" style="color: #facc15;"></i>
+                    <span>CDRRMO Emergency Hotline: <strong>911</strong></span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-tertiary-item">
+                    <i class="fa fa-cloud-bolt" style="color: #facc15;"></i>
+                    <span>PAGASA Update: <strong>Normal / Alert Level 0</strong> &bull; Hinaplanon DRRM</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+            </div>
+            <div class="portal-ticker-content" aria-hidden="true">
+                <div class="portal-alert-item alert-primary-item">
+                    <i class="fa fa-triangle-exclamation" style="color: #facc15;"></i>
+                    <span><strong style="color: #fef08a;">ALERT:</strong> Mandulog River monitoring active &bull; Check your Purok risk level</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-secondary-item">
+                    <i class="fa fa-phone" style="color: #facc15;"></i>
+                    <span>CDRRMO Emergency Hotline: <strong>911</strong></span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-tertiary-item">
+                    <i class="fa fa-cloud-bolt" style="color: #facc15;"></i>
+                    <span>PAGASA Update: <strong>Normal / Alert Level 0</strong> &bull; Hinaplanon DRRM</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-primary-item">
+                    <i class="fa fa-triangle-exclamation" style="color: #facc15;"></i>
+                    <span><strong style="color: #fef08a;">ALERT:</strong> Mandulog River monitoring active &bull; Check your Purok risk level</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-secondary-item">
+                    <i class="fa fa-phone" style="color: #facc15;"></i>
+                    <span>CDRRMO Emergency Hotline: <strong>911</strong></span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+                <div class="portal-alert-item alert-tertiary-item">
+                    <i class="fa fa-cloud-bolt" style="color: #facc15;"></i>
+                    <span>PAGASA Update: <strong>Normal / Alert Level 0</strong> &bull; Hinaplanon DRRM</span>
+                </div>
+                <span class="portal-ticker-divider">&bull;</span>
+            </div>
         </div>
     </div>
 

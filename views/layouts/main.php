@@ -10,7 +10,7 @@
     <!-- FontAwesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Application Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?= time() ?>">
 </head>
 <body>
 <div class="app-wrapper">
@@ -22,11 +22,10 @@
             </div>
             <div class="brand-title-wrap">
                 <div class="brand-title-main">
+                    <div class="brand-line"><span class="brand-initial">P</span>ADAYON</div>
                     <div class="brand-line"><span class="brand-initial">H</span>INAPLANON</div>
-                    <div class="brand-line"><span class="brand-initial">D</span>RRM</div>
-                    <div class="brand-line"><span class="brand-initial">S</span>YSTEM</div>
                 </div>
-                <div class="brand-subtitle">Resource Allocation Recommender</div>
+                <div class="brand-subtitle">ILIGAN CITY &bull; DRRM SYSTEM</div>
             </div>
         </div>
 
@@ -208,7 +207,7 @@
 
     <!-- Main Content Area -->
     <div class="main-content-wrapper">
-        <header class="topbar">
+        <header class="topbar" id="appTopbar">
             <div class="topbar-left">
                 <button type="button" class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle Navigation Sidebar">
                     <i class="fa fa-bars"></i>
@@ -265,6 +264,6 @@
 <!-- Leaflet JS for Maps -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <!-- Application Scripts -->
-<script src="assets/js/app.js"></script>
+<script src="assets/js/app.js?v=<?= time() ?>"></script>
 </body>
 </html>

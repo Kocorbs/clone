@@ -133,13 +133,13 @@ a:hover {
 }
 
 .brand-logo-img {
-    width: 76px;
-    height: 76px;
+    width: 104px;
+    height: 104px;
     object-fit: contain;
     border-radius: 50%;
     background: #ffffff;
-    padding: 3px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(255, 255, 255, 0.35);
+    padding: 4px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(255, 255, 255, 0.35);
     transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -161,19 +161,19 @@ a:hover {
 }
 
 .brand-line {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 800;
     display: flex;
     align-items: baseline;
     color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .brand-line .brand-initial {
-    font-size: 1.55rem;
+    font-size: 1.65rem;
     font-weight: 900;
     color: #ffffff;
-    margin-right: 1px;
+    margin-right: 1.5px;
     line-height: 1;
 }
 
@@ -399,6 +399,20 @@ a:hover {
     top: 0;
     z-index: 900;
     box-shadow: var(--shadow-sm);
+    transition: height 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                padding 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Shrink state when page is scrolled */
+.topbar.scrolled {
+    height: 48px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .page-title-header {
@@ -408,6 +422,11 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: font-size 0.25s ease;
+}
+
+.topbar.scrolled .page-title-header {
+    font-size: 0.98rem;
 }
 
 .topbar-actions {
@@ -458,6 +477,7 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: gap 0.25s ease;
 }
 .role-pill {
     font-size: 0.72rem;
@@ -466,11 +486,33 @@ a:hover {
     border-radius: 9999px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    transition: all 0.25s ease;
 }
 .role-icdrrmo { background-color: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
 .role-barangay-head { background-color: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
 .role-responder { background-color: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
 .role-resident { background-color: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+/* Scrolled compact variants */
+.topbar.scrolled .user-profile-badge {
+    gap: 8px;
+}
+.topbar.scrolled .role-pill {
+    font-size: 0.65rem;
+    padding: 2px 7px;
+}
+.topbar.scrolled .user-profile-badge a {
+    font-size: 0.82rem;
+}
+.topbar.scrolled .notif-bell-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+}
+.topbar.scrolled .btn-sm {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+}
 
 /* Content Container */
 .content-container {
@@ -919,33 +961,69 @@ table.table tr:hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 1. Top Emergency Alert Ticker Bar */
+/* 1. Top Emergency Alert Ticker Bar (Animated Right-to-Left Live Crawl) */
 .portal-alert-bar {
     background-color: #003832;
     color: #ffffff;
-    font-size: 0.76rem;
-    padding: 6px clamp(12px, 3vw, 24px);
+    font-size: 0.78rem;
+    height: 36px;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 8px 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     z-index: 40;
     line-height: 1.4;
-    max-height: 60px;
-    opacity: 1;
     overflow: hidden;
-    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease, opacity 0.25s ease, border 0.3s ease;
+    position: relative;
+    user-select: none;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s ease, opacity 0.25s ease, border 0.3s ease;
 }
+
+.portal-ticker-track {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    will-change: transform;
+    animation: portalTickerCrawl 34s linear infinite;
+}
+
+.portal-alert-bar:hover .portal-ticker-track,
+.portal-alert-bar:focus-within .portal-ticker-track {
+    animation-play-state: paused;
+}
+
+.portal-ticker-content {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 32px;
+    padding-right: 32px;
+}
+
+.portal-ticker-divider {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
 .portal-alert-item {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    white-space: normal;
+    gap: 8px;
+    white-space: nowrap;
 }
+
 .portal-alert-item i {
     flex-shrink: 0;
+}
+
+@keyframes portalTickerCrawl {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
 }
 
 /* 2. Main Brand Header */
@@ -1661,10 +1739,13 @@ table.table tr:hover {
 /* 4. Large Phones & Small Tablets (576px to 767px) */
 @media (max-width: 767px) {
     .portal-alert-bar {
-        font-size: 0.72rem;
-        justify-content: center;
-        text-align: center;
-        padding: 6px 10px;
+        font-size: 0.74rem;
+        height: 32px;
+        padding: 0;
+    }
+    .portal-ticker-content {
+        gap: 20px;
+        padding-right: 20px;
     }
     .portal-header {
         padding: 8px 14px;
@@ -1695,12 +1776,14 @@ table.table tr:hover {
 
 /* 5. Mobile Phones (< 576px) */
 @media (max-width: 575px) {
-    .portal-alert-item.alert-tertiary-item {
-        display: none;
-    }
     .portal-alert-bar {
-        font-size: 0.7rem;
-        gap: 4px 10px;
+        font-size: 0.72rem;
+        height: 30px;
+        padding: 0;
+    }
+    .portal-ticker-content {
+        gap: 16px;
+        padding-right: 16px;
     }
     .portal-header {
         padding: 8px 10px;
@@ -1852,6 +1935,7 @@ table.table tr:hover {
 /* 1. Alert bar collapses out of the way smoothly */
 .portal-sticky-header.scrolled .portal-alert-bar {
     max-height: 0;
+    height: 0;
     padding-top: 0;
     padding-bottom: 0;
     opacity: 0;

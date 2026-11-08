@@ -416,8 +416,8 @@
     </div>
 
 <?php else: /* ICDRRMO & Barangay Head Main Operational Split */ ?>
-    <!-- Staff Section: Active Requests & AI Recommendation Engine Highlights -->
-    <div class="grid-cols-2">
+    <!-- Staff Section: Active Requests & AI Recommendation Engine Highlights (Full-Width Stacked) -->
+    <div style="display: flex; flex-direction: column; gap: 24px;">
         <!-- Active Disaster Requests -->
         <div class="card">
             <div class="card-header">
@@ -518,11 +518,11 @@
         </div>
 
         <!-- Responder Ground Field Reports (Administrative View) -->
-        <div class="card" style="margin-top: 24px; grid-column: span 2;">
+        <div class="card">
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                 <div class="card-title">
                     <i class="fa fa-truck-medical text-primary"></i> 
-                    <?= $role === 'Barangay Head' ? 'Responder Ground Field Reports — Verification Queue' : 'Citywide Responder Ground Reports Monitoring' ?>
+                    Citywide Responder Ground Reports Monitoring
                 </div>
                 <div style="display: flex; gap: 8px;">
                     <a href="index.php?route=field-reports" class="btn btn-outline btn-sm">
@@ -595,7 +595,7 @@
 
         <!-- Relief Claims Monitoring & Oversight Section (ICDRRMO Super Admin) -->
         <?php if ($role === 'ICDRRMO'): ?>
-        <div class="card" style="margin-top: 24px; grid-column: span 2; border-top: 4px solid var(--primary);">
+        <div class="card" style="border-top: 4px solid var(--primary);">
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                 <div>
                     <div class="card-title">

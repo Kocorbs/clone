@@ -61,6 +61,65 @@ document.addEventListener('DOMContentLoaded', function () {
         handleScroll();
     }
 
+    // 0.1 Dashboard Topbar Shrink on Scroll & Wheel
+    const dashboardTopbar = document.getElementById('appTopbar') || document.querySelector('.topbar');
+    if (dashboardTopbar) {
+        let isTopbarShrunk = false;
+
+        const setTopbarShrunk = (shrunk) => {
+            if (shrunk !== isTopbarShrunk) {
+                isTopbarShrunk = shrunk;
+                if (isTopbarShrunk) {
+                    dashboardTopbar.classList.add('scrolled');
+                } else {
+                    dashboardTopbar.classList.remove('scrolled');
+                }
+            }
+        };
+
+        const handleTopbarScroll = () => {
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
+            if (scrollY > 15) {
+                setTopbarShrunk(true);
+            } else if (scrollY <= 5) {
+                setTopbarShrunk(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleTopbarScroll, { passive: true });
+        document.addEventListener('scroll', handleTopbarScroll, { passive: true });
+
+        // Wheel listener for instant shrinking on mousewheel down
+        window.addEventListener('wheel', (e) => {
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
+            if (e.deltaY > 15) {
+                setTopbarShrunk(true);
+            } else if (e.deltaY < -15 && scrollY <= 25) {
+                setTopbarShrunk(false);
+            }
+        }, { passive: true });
+
+        // Touch gestures for mobile screens
+        let touchStartTopbarY = 0;
+        window.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches[0]) touchStartTopbarY = e.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches && e.touches[0]) {
+                const diff = touchStartTopbarY - e.touches[0].clientY;
+                const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
+                if (diff > 20) {
+                    setTopbarShrunk(true);
+                } else if (diff < -20 && scrollY <= 25) {
+                    setTopbarShrunk(false);
+                }
+            }
+        }, { passive: true });
+
+        handleTopbarScroll();
+    }
+
     // 0. Mobile Sidebar Toggle & Overlay
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebar = document.getElementById('appSidebar');
@@ -77,6 +136,9 @@ document.addEventListener('DOMContentLoaded', function () {
             sidebarOverlay.classList.remove('active');
         });
     }
+
+
+
 
     // 1. Password Visibility Toggle
     const togglePassBtn = document.getElementById('togglePassword');
